@@ -8,7 +8,7 @@ import VideoLength from "../shared/videoLength";
 const VideoCard = ({ video }) => {
     return (
         <Link to={`/video/${video?.videoId}`}>
-            <div className="flex flex-col mb-8 hover:scale-125">
+            <div className="flex flex-col mb-8 opacity-hover">
                 <div className="relative h-48 md:h-40 md:rounded-xl overflow-hidden">
                     <img
                         className="h-full w-full object-cover"

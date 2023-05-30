@@ -9,8 +9,31 @@ body {
         "Helvetica Neue", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    // background-color: black;
+    background-color: black;
+    overflow-y: scroll !important;
+    // scrollbar-color: red orange !important;
+    // scrollbar-width: thin !important;
 }
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: black rgb(37, 37, 37);
+  }
+  
+  /* Works on Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 18px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: rgb(37, 37, 37);
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: black;
+    // border-radius: 10px;
+    border: 4px solid rgb(37, 37, 37);
+  }
 
 #root {
     height: 100vh;
@@ -73,5 +96,12 @@ code {
 @media screen and (min-width: 1024px) {
     .custom-h {
         height: 100vh !important;
+    }
+}
+
+.opacity-hover {
+    transition: .25s all ease-out !important;
+    &:hover {
+        opacity: .8;
     }
 }

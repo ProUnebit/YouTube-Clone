@@ -5,6 +5,8 @@ import { BsFillCheckCircleFill } from "react-icons/bs";
 
 import VideoLength from "../shared/videoLength";
 
+import avatarAutor from '../assets/avatar.png'
+
 const VideoCard = ({ video }) => {
 
     const [isHovering, setIsHovering] = useState(false);
@@ -53,10 +55,10 @@ const VideoCard = ({ video }) => {
                 </div>
                 <div className="flex text-white mt-3">
                     <div className="flex items-start">
-                        <div className="relative flex h-9 w-9 rounded-full overflow-hidden bg-gray-900">
+                        <div className="relative flex h-9 w-9 grayscale rounded-full overflow-hidden bg-gray-900">
                             <img
                                 className="h-full w-full object-cover"
-                                src={video?.author?.avatar[0]?.url}
+                                src={avatarAutor}
                             />
                         </div>
                     </div>

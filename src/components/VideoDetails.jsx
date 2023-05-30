@@ -9,6 +9,8 @@ import { fetchDataFromApi } from "../utils/api";
 import { Context } from "../context/contextApi";
 import SuggestionVideoCard from "./SuggestionVideoCard";
 
+import avatarAutor from '../assets/avatar.png'
+
 const VideoDetails = () => {
     const [video, setVideo] = useState();
     const [relatedVideos, setRelatedVideos] = useState();
@@ -59,10 +61,11 @@ const VideoDetails = () => {
                     <div className="flex justify-between flex-col md:flex-row mt-4">
                         <div className="flex">
                             <div className="flex items-start">
-                                <div className="flex h-11 w-11 rounded-full overflow-hidden bg-gray-900 cursor-pointer" onClick={() => alert("Work in progress...")}>
+                                <div className="flex h-11 w-11 grayscale rounded-full overflow-hidden bg-gray-900 cursor-pointer" onClick={() => alert("Work in progress...")}>
                                     <img
                                         className="h-full w-full object-cover"
-                                        src={video?.author?.avatar[0]?.url}
+                                        src={avatarAutor}
+                                        // src={video?.author?.avatar[0]?.url}
                                     />
                                 </div>
                             </div>

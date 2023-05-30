@@ -6,7 +6,7 @@ const YOUTUBE_API_KEY = import.meta.env.REACT_APP_YOUTUBE_API_KEY;
 const options = {
     params: { hl: "en", gl: "US" },
     headers: {
-        "X-RapidAPI-Key": YOUTUBE_API_KEY,
+        "X-RapidAPI-Key": 'YGLSgpT6iUmshP8crFHYR2IK8gG5p1yn0CzjsnP6wclM6Vzcqt',
         "X-RapidAPI-Host": "youtube138.p.rapidapi.com",
     },
 };

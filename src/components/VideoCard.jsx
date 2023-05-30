@@ -53,7 +53,7 @@ const VideoCard = ({ video }) => {
                 </div>
                 <div className="flex text-white mt-3">
                     <div className="flex items-start">
-                        <div className="relative flex h-9 w-9 rounded-full overflow-hidden">
+                        <div className="relative flex h-9 w-9 rounded-full overflow-hidden bg-gray-900">
                             <img
                                 className="h-full w-full object-cover"
                                 src={video?.author?.avatar[0]?.url}

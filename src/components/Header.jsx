@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 
 import ytLogo from "../assets/yt-logo.png";
 import ytLogoMobile from "../assets/yt-logo-mobile.png";
+// import myAvatarPic from '../assets/image2.jpg';
 
 import { SlMenu } from "react-icons/sl";
 import { IoIosSearch } from "react-icons/io";
@@ -97,7 +98,7 @@ const Header = () => {
                     </div>
                 </div>
                 <div className="flex h-8 w-8 overflow-hidden rounded-full md:ml-4">
-                    <img src="https://xsgames.co/randomusers/assets/avatars/female/67.jpg" />
+                    <img src="http://xsgames.co/randomusers/assets/avatars/male/23.jpg"/>
                 </div>
             </div>
         </div>

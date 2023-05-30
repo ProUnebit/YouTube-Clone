@@ -2,6 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyPlugin = require("copy-webpack-plugin");
 // const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 const devMode = process.env.NODE_ENV !== 'production';
@@ -37,6 +38,11 @@ module.exports = {
         }),
         new MiniCssExtractPlugin({
             filename: devMode ? 'css/build_main.[contenthash:10].css' : 'css/build_main.min.css'
+        }),
+        new CopyPlugin({
+            patterns: [
+                { from: "netlify" }
+            ],
         }),
         require("@import-meta-env/unplugin").webpack({
             env: ".env",

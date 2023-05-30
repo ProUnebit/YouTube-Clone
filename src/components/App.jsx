@@ -17,8 +17,8 @@ const App = () => {
                     <Header />
                     <Routes>
                         <Route path="/" element={<Feed />} />
-                        {/* <Route path="/searchResult/:searchQuery" element={<SearchResult />} />
-                        <Route path="/video/:id" element={<VideoDetails />} /> */}
+                        {/* <Route path="/searchResult/:searchQuery" element={<SearchResult />} /> */}
+                        {/* <Route path="/video/:id" element={<VideoDetails />} /> */}
                     </Routes>
                 </div>
             </BrowserRouter>

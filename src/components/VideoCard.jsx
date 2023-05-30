@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { abbreviateNumber } from "js-abbreviation-number";
 import { Link } from "react-router-dom";
 import { BsFillCheckCircleFill } from "react-icons/bs";
@@ -6,14 +6,36 @@ import { BsFillCheckCircleFill } from "react-icons/bs";
 import VideoLength from "../shared/videoLength";
 
 const VideoCard = ({ video }) => {
+
+    const [isHovering, setIsHovering] = useState(false);
+
+    const handleMouseOver = () => {
+        if (video.movingThumbnails) setIsHovering(true);
+    };
+    
+    const handleMouseOut = () => {
+        setIsHovering(false);
+    };
+
     return (
         <Link to={`/video/${video?.videoId}`}>
             <div className="flex flex-col mb-8 opacity-hover">
                 <div className="relative h-48 md:h-40 md:rounded-xl overflow-hidden">
-                    <img
-                        className="h-full w-full object-cover"
-                        src={video?.thumbnails[0]?.url}
-                    />
+                    {!isHovering && (
+                        <img
+                            className="h-full w-full object-cover"
+                            src={video?.thumbnails[0]?.url}
+                            onMouseOver={handleMouseOver}
+                            onMouseOut={handleMouseOut}
+                        />
+                    )}
+                    {(video.movingThumbnails && isHovering) && (
+                        <img
+                            className="h-full w-full object-cover"
+                            src={video?.movingThumbnails[0]?.url}
+                            onMouseOut={() =>  setIsHovering(false)}
+                        />
+                    )}
                     {video?.lengthSeconds && (
                         <VideoLength time={video?.lengthSeconds} />
                     )}

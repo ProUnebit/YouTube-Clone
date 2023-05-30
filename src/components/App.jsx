@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 
 const App = () => {
 
     return (
-        <div>YouTube Clone</div>
+        <div className="text-3xl text-red-300">YouTube Clone</div>
     )
 }
 

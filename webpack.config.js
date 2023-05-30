@@ -125,6 +125,6 @@ module.exports = {
         ]
     },
     resolve: {
-        extensions: ['*', '.js', '.jsx', 'scss'],
+        extensions: ['*', '.js', '.jsx', 'scss', 'css'],
     }
 }

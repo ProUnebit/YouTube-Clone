@@ -100,8 +100,23 @@ code {
 }
 
 .opacity-hover {
-    transition: .225s all ease-out !important;
+    transition: .25s all ease-out !important;
     &:hover {
         opacity: .8;
     }
 }
+
+// .opacity-active {
+//     animation: op-active-out .15s linear;
+//     // animation-fill-mode: backwards;
+//     // animation-iteration-count: 0;
+// }
+
+// @keyframes op-active-out {
+//     from {
+//         opacity: 1;
+//     }
+//     to {
+//         opacity: 0 !important;
+//     }
+// }

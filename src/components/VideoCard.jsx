@@ -8,13 +8,18 @@ import VideoLength from "../shared/videoLength";
 const VideoCard = ({ video }) => {
 
     const [isHovering, setIsHovering] = useState(false);
+    // const [isOpacityActive, setIsOpacityActive] = useState(false);
 
     const handleMouseOver = () => {
-        if (video.movingThumbnails) setIsHovering(true);
+        if (video.movingThumbnails) {
+            // setIsOpacityActive(true);
+            setTimeout(() => setIsHovering(true), 250);
+        }
     };
     
     const handleMouseOut = () => {
-        setIsHovering(false);
+        // setIsOpacityActive(false);
+        setTimeout(() => setIsHovering(false), 300);
     };
 
     return (
@@ -22,12 +27,18 @@ const VideoCard = ({ video }) => {
             <div className="flex flex-col mb-8 opacity-hover">
                 <div className="relative h-48 md:h-40 md:rounded-xl overflow-hidden">
                     {!isHovering && (
-                        <img
-                            className="h-full w-full object-cover"
-                            src={video?.thumbnails[0]?.url}
-                            onMouseOver={handleMouseOver}
-                            onMouseOut={handleMouseOut}
-                        />
+                        <React.Fragment>
+                            <img
+                                className={`h-full w-full object-cover`}
+                                src={video?.thumbnails[0]?.url}
+                                onMouseOver={handleMouseOver}
+                                onMouseOut={handleMouseOut}
+                            />
+                            <img
+                                className="h-full w-full object-cover hidden"
+                                src={video.movingThumbnails ? video?.movingThumbnails[0]?.url : ''}
+                            />
+                        </React.Fragment>
                     )}
                     {(video.movingThumbnails && isHovering) && (
                         <img
@@ -42,7 +53,7 @@ const VideoCard = ({ video }) => {
                 </div>
                 <div className="flex text-white mt-3">
                     <div className="flex items-start">
-                        <div className="flex h-9 w-9 rounded-full overflow-hidden">
+                        <div className="relative flex h-9 w-9 rounded-full overflow-hidden">
                             <img
                                 className="h-full w-full object-cover"
                                 src={video?.author?.avatar[0]?.url}

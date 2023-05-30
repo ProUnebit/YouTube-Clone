@@ -90,14 +90,14 @@ const Header = () => {
             </div>
             <div className="flex items-center">
                 <div className="hidden md:flex">
-                    <div className="flex items-center justify-center h-10 w-10 rounded-full hover:bg-[#303030]/[0.6] cursor-pointer">
+                    <div className="flex items-center justify-center h-10 w-10 rounded-full hover:bg-[#303030]/[0.6] cursor-pointer" onClick={() => alert("Work in progress...")}>
                         <RiVideoAddLine className="text-white text-xl" />
                     </div>
-                    <div className="flex items-center justify-center ml-2 h-10 w-10 rounded-full hover:bg-[#303030]/[0.6] cursor-pointer">
+                    <div className="flex items-center justify-center ml-2 h-10 w-10 rounded-full hover:bg-[#303030]/[0.6] cursor-pointer" onClick={() => alert("Work in progress...")}>
                         <FiBell className="text-white text-xl" />
                     </div>
                 </div>
-                <div className="flex h-8 w-8 overflow-hidden rounded-full md:ml-4 cursor-pointer">
+                <div className="flex h-8 w-8 overflow-hidden rounded-full md:ml-4 cursor-pointer" onClick={() => alert("Work in progress...")}>
                     <img src="http://xsgames.co/randomusers/assets/avatars/male/23.jpg"/>
                 </div>
             </div>

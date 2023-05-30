@@ -1,5 +1,3 @@
-// import React from "react";
-
 import { AiFillHome, AiOutlineFlag } from "react-icons/ai"
 import { MdLocalFireDepartment, MdLiveTv } from "react-icons/md"
 import { CgMusicNote } from "react-icons/cg"

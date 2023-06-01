@@ -8,6 +8,8 @@
 
 - - -
 
+![](https://raw.githubusercontent.com/ProUnebit/Reminder_ToMe_Reminder/master/src/assets/img/yc-1.png)
+![](https://raw.githubusercontent.com/ProUnebit/Reminder_ToMe_Reminder/master/src/assets/img/yc-3.png)
 
 - - -
 Mail for communication: <ProUnebit@yandex.ru>

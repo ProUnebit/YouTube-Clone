@@ -5,6 +5,8 @@ import { BsFillCheckCircleFill } from "react-icons/bs";
 
 import VideoLength from "../shared/videoLength";
 
+import avatarAutor from '../assets/avatar.png'
+
 const SearchResultVideoCard = ({ video }) => {
     return (
         <Link to={`/video/${video?.videoId}`}>
@@ -27,10 +29,10 @@ const SearchResultVideoCard = ({ video }) => {
                     </span>
                     <div className="hidden md:flex items-center">
                         <div className="flex items-start mr-3">
-                            <div className="flex h-9 w-9 rounded-full overflow-hidden">
+                            <div className="flex h-9 w-9 rounded-full overflow-hidden bg-gray-900 grayscale">
                                 <img
                                     className="h-full w-full object-cover"
-                                    src={video?.author?.avatar[0]?.url}
+                                    src={avatarAutor}
                                 />
                             </div>
                         </div>
